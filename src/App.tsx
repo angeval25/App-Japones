@@ -37,7 +37,57 @@ const WORD_POOL = [
   { id: 20, category: 'n5_noun', kanji: 'パン', kana: 'パン', romaji: 'pan', spanish: 'Pan', image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400', kanjiBreakdown: [], kanaBreakdown: [{char:'パ', sound:'pa'},{char:'ン', sound:'n'}] },
   { id: 21, category: 'n5_noun', kanji: 'トイレ', kana: 'トイレ', romaji: 'toire', spanish: 'Baño', image: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=400', kanjiBreakdown: [], kanaBreakdown: [{char:'ト', sound:'to'},{char:'イ', sound:'i'},{char:'レ', sound:'re'}] },
   { id: 22, category: 'n5_noun', kanji: 'デパート', kana: 'デパート', romaji: 'depaato', spanish: 'Grandes Almacenes', image: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=400', kanjiBreakdown: [], kanaBreakdown: [{char:'デ', sound:'de'},{char:'パ', sound:'pa'},{char:'ー', sound:'(largo)'},{char:'ト', sound:'to'}] },
-  { id: 23, category: 'n5_noun', kanji: 'テレビ', kana: 'テレビ', romaji: 'terebi', spanish: 'Televisión', image: 'https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=400', kanjiBreakdown: [], kanaBreakdown: [{char:'テ', sound:'te'},{char:'レ', sound:'re'},{char:'ビ', sound:'bi'}] }
+  { id: 23, category: 'n5_noun', kanji: 'テレビ', kana: 'テレビ', romaji: 'terebi', spanish: 'Televisión', image: 'https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=400', kanjiBreakdown: [], kanaBreakdown: [{char:'テ', sound:'te'},{char:'レ', sound:'re'},{char:'ビ', sound:'bi'}] },
+  { id: 24, category: 'n5_noun', kanji: '車', kana: 'くるま', romaji: 'kuruma', spanish: 'Coche', image: 'https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=400', kanjiBreakdown: [{char:'車', mean:'Vehículo', reading:'kuruma'}], kanaBreakdown: [{char:'く', sound:'ku'},{char:'る', sound:'ru'},{char:'ま', sound:'ma'}] },
+  { id: 25, category: 'n5_noun', kanji: '電車', kana: 'でんしゃ', romaji: 'densha', spanish: 'Tren', image: 'https://images.unsplash.com/photo-1474487022159-4a49a99d1dd8?w=400', kanjiBreakdown: [{char:'電', mean:'Electricidad', reading:'den'},{char:'車', mean:'Vehículo', reading:'sha'}], kanaBreakdown: [{char:'で', sound:'de'},{char:'ん', sound:'n'},{char:'しゃ', sound:'sha'}] },
+  { id: 26, category: 'n5_noun', kanji: '飛行機', kana: 'ひこうき', romaji: 'hikouki', spanish: 'Avión', image: 'https://images.unsplash.com/photo-1436491865332-7a61a109c713?w=400', kanjiBreakdown: [{char:'飛', mean:'Volar', reading:'hi'},{char:'行', mean:'Ir', reading:'kou'},{char:'機', mean:'Máquina', reading:'ki'}], kanaBreakdown: [{char:'ひ', sound:'hi'},{char:'こ', sound:'ko'},{char:'う', sound:'u'},{char:'き', sound:'ki'}] },
+  { id: 27, category: 'n5_noun', kanji: '部屋', kana: 'へや', romaji: 'heya', spanish: 'Habitación', image: 'https://images.unsplash.com/photo-1522771739844-649f6d175d97?w=400', kanjiBreakdown: [{char:'部', mean:'Parte', reading:'he'},{char:'屋', mean:'Tienda/Techo', reading:'ya'}], kanaBreakdown: [{char:'へ', sound:'he'},{char:'や', sound:'ya'}] },
+  { id: 28, category: 'n5_noun', kanji: '椅子', kana: 'いす', romaji: 'isu', spanish: 'Silla', image: 'https://images.unsplash.com/photo-1503602642458-232111445657?w=400', kanjiBreakdown: [{char:'椅', mean:'Silla', reading:'i'},{char:'子', mean:'Niño/Sufijo', reading:'su'}], kanaBreakdown: [{char:'い', sound:'i'},{char:'す', sound:'su'}] },
+  { id: 29, category: 'n5_noun', kanji: '机', kana: 'つくえ', romaji: 'tsukue', spanish: 'Escritorio', image: 'https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=400', kanjiBreakdown: [{char:'机', mean:'Escritorio', reading:'tsukue'}], kanaBreakdown: [{char:'つ', sound:'tsu'},{char:'く', sound:'ku'},{char:'え', sound:'e'}] },
+  { id: 30, category: 'n5_noun', kanji: '窓', kana: 'まど', romaji: 'mado', spanish: 'Ventana', image: 'https://images.unsplash.com/photo-1503708928676-1cb796a0891e?w=400', kanjiBreakdown: [{char:'窓', mean:'Ventana', reading:'mado'}], kanaBreakdown: [{char:'ま', sound:'ma'},{char:'ど', sound:'do'}] },
+  { id: 31, category: 'n5_noun', kanji: 'ドア', kana: 'ドア', romaji: 'doa', spanish: 'Puerta', image: 'https://images.unsplash.com/photo-1506377295352-e3154d43ea9e?w=400', kanjiBreakdown: [], kanaBreakdown: [{char:'ド', sound:'do'},{char:'ア', sound:'a'}] },
+  { id: 32, category: 'n5_noun', kanji: '料理', kana: 'りょうり', romaji: 'ryouri', spanish: 'Cocina', image: 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=400', kanjiBreakdown: [{char:'料', mean:'Ingrediente', reading:'ryou'},{char:'理', mean:'Lógica', reading:'ri'}], kanaBreakdown: [{char:'りょ', sound:'ryo'},{char:'う', sound:'u'},{char:'り', sound:'ri'}] },
+  { id: 33, category: 'n5_noun', kanji: 'お茶', kana: 'おちゃ', romaji: 'ocha', spanish: 'Té', image: 'https://images.unsplash.com/photo-1544787210-282744863035?w=400', kanjiBreakdown: [{char:'茶', mean:'Té', reading:'cha'}], kanaBreakdown: [{char:'お', sound:'o'},{char:'ちゃ', sound:'cha'}] },
+  { id: 34, category: 'n5_noun', kanji: 'お酒', kana: 'おさけ', romaji: 'osake', spanish: 'Sake/Alcohol', image: 'https://images.unsplash.com/photo-1582719188393-bb71ca45dbb9?w=400', kanjiBreakdown: [{char:'酒', mean:'Sake', reading:'sake'}], kanaBreakdown: [{char:'お', sound:'o'},{char:'さ', sound:'sa'},{char:'け', sound:'ke'}] },
+  { id: 35, category: 'n5_noun', kanji: '卵', kana: 'たまご', romaji: 'tamago', spanish: 'Huevo', image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400', kanjiBreakdown: [{char:'卵', mean:'Huevo', reading:'tamago'}], kanaBreakdown: [{char:'た', sound:'ta'},{char:'ま', sound:'ma'},{char:'ご', sound:'go'}] },
+  { id: 36, category: 'n5_noun', kanji: '肉', kana: 'にく', romaji: 'niku', spanish: 'Carne', image: 'https://images.unsplash.com/photo-1551028150-64b9f398f678?w=400', kanjiBreakdown: [{char:'肉', mean:'Carne', reading:'niku'}], kanaBreakdown: [{char:'に', sound:'ni'},{char:'く', sound:'ku'}] },
+  { id: 37, category: 'n5_noun', kanji: '魚', kana: 'さかな', romaji: 'sakana', spanish: 'Pescado', image: 'https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=400', kanjiBreakdown: [{char:'魚', mean:'Pescado', reading:'sakana'}], kanaBreakdown: [{char:'さ', sound:'sa'},{char:'か', sound:'ka'},{char:'な', sound:'na'}] },
+  { id: 38, category: 'n5_noun', kanji: '野菜', kana: 'やさい', romaji: 'yasai', spanish: 'Verdura', image: 'https://images.unsplash.com/photo-1566385101042-1a0aa0c1233c?w=400', kanjiBreakdown: [{char:'野', mean:'Campo', reading:'ya'},{char:'菜', mean:'Vegetal', reading:'sai'}], kanaBreakdown: [{char:'や', sound:'ya'},{char:'さ', sound:'sa'},{char:'い', sound:'i'}] },
+  { id: 39, category: 'n5_noun', kanji: '果物', kana: 'くだもの', romaji: 'kudamono', spanish: 'Fruta', image: 'https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=400', kanjiBreakdown: [{char:'果', mean:'Fruto', reading:'kuda'},{char:'物', mean:'Cosa', reading:'mono'}], kanaBreakdown: [{char:'く', sound:'ku'},{char:'だ', sound:'da'},{char:'も', sound:'mo'},{char:'の', sound:'no'}] },
+  { id: 40, category: 'n5_noun', kanji: '砂糖', kana: 'さとう', romaji: 'satou', spanish: 'Azúcar', image: 'https://images.unsplash.com/photo-1581441363689-1f3c3c414635?w=400', kanjiBreakdown: [{char:'砂', mean:'Arena', reading:'sa'},{char:'糖', mean:'Azúcar', reading:'tou'}], kanaBreakdown: [{char:'さ', sound:'sa'},{char:'と', sound:'to'},{char:'う', sound:'u'}] },
+  { id: 41, category: 'n5_noun', kanji: '塩', kana: 'しお', romaji: 'shio', spanish: 'Sal', image: 'https://images.unsplash.com/photo-1518110925495-5fe2fda0442c?w=400', kanjiBreakdown: [{char:'塩', mean:'Sal', reading:'shio'}], kanaBreakdown: [{char:'し', sound:'shi'},{char:'お', sound:'o'}] },
+  { id: 42, category: 'n5_noun', kanji: '醤油', kana: 'しょうゆ', romaji: 'shouyu', spanish: 'Salsa de soja', image: 'https://images.unsplash.com/photo-1584269600464-37b1b58a9fe7?w=400', kanjiBreakdown: [{char:'醤', mean:'Salsa', reading:'shou'},{char:'油', mean:'Aceite', reading:'yu'}], kanaBreakdown: [{char:'しょ', sound:'sho'},{char:'う', sound:'u'},{char:'ゆ', sound:'yu'}] },
+  { id: 43, category: 'n5_noun', kanji: '箸', kana: 'はし', romaji: 'hashi', spanish: 'Palillos', image: 'https://images.unsplash.com/photo-1584269600464-37b1b58a9fe7?w=400', kanjiBreakdown: [{char:'箸', mean:'Palillos', reading:'hashi'}], kanaBreakdown: [{char:'は', sound:'ha'},{char:'し', sound:'shi'}] },
+  { id: 44, category: 'n5_noun', kanji: '茶碗', kana: 'ちゃわん', romaji: 'chawan', spanish: 'Cuenco', image: 'https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=400', kanjiBreakdown: [{char:'茶', mean:'Té', reading:'cha'},{char:'碗', mean:'Cuenco', reading:'wan'}], kanaBreakdown: [{char:'ちゃ', sound:'cha'},{char:'わ', sound:'wa'},{char:'ん', sound:'n'}] },
+  { id: 45, category: 'n5_noun', kanji: 'コップ', kana: 'コップ', romaji: 'koppu', spanish: 'Vaso', image: 'https://images.unsplash.com/photo-1516714435131-44d6b64dc6a2?w=400', kanjiBreakdown: [], kanaBreakdown: [{char:'コ', sound:'ko'},{char:'ッ', sound:'(p)'},{char:'プ', sound:'pu'}] },
+  { id: 46, category: 'n5_noun', kanji: '皿', kana: 'さら', romaji: 'sara', spanish: 'Plato', image: 'https://images.unsplash.com/photo-1577906030551-59758a512461?w=400', kanjiBreakdown: [{char:'皿', mean:'Plato', reading:'sara'}], kanaBreakdown: [{char:'さ', sound:'sa'},{char:'ら', sound:'ra'}] },
+  { id: 47, category: 'n5_noun', kanji: 'ナイフ', kana: 'ナイフ', romaji: 'naifu', spanish: 'Cuchillo', image: 'https://images.unsplash.com/photo-1594051664297-66572a1bbd4e?w=400', kanjiBreakdown: [], kanaBreakdown: [{char:'ナ', sound:'na'},{char:'イ', sound:'i'},{char:'フ', sound:'fu'}] },
+  { id: 48, category: 'n5_noun', kanji: 'フォーク', kana: 'フォーク', romaji: 'fooku', spanish: 'Tenedor', image: 'https://images.unsplash.com/photo-1550989460-0adf9ea622e2?w=400', kanjiBreakdown: [], kanaBreakdown: [{char:'フォ', sound:'fo'},{char:'ー', sound:'(largo)'},{char:'ク', sound:'ku'}] },
+  { id: 49, category: 'n5_noun', kanji: 'スプーン', kana: 'スプーン', romaji: 'supuun', spanish: 'Cuchara', image: 'https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=400', kanjiBreakdown: [], kanaBreakdown: [{char:'ス', sound:'su'},{char:'プ', sound:'pu'},{char:'ー', sound:'(largo)'},{char:'ン', sound:'n'}] },
+  { id: 50, category: 'n5_noun', kanji: '勉強', kana: 'べんきょう', romaji: 'benkyou', spanish: 'Estudio', image: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=400', kanjiBreakdown: [{char:'勉', mean:'Esfuerzo', reading:'ben'},{char:'強', mean:'Fuerte', reading:'kyou'}], kanaBreakdown: [{char:'べ', sound:'be'},{char:'ん', sound:'n'},{char:'きょ', sound:'kyo'},{char:'う', sound:'u'}] },
+  { id: 51, category: 'n5_noun', kanji: '仕事', kana: 'しごと', romaji: 'shigoto', spanish: 'Trabajo', image: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=400', kanjiBreakdown: [{char:'仕', mean:'Servir', reading:'shi'},{char:'事', mean:'Cosa', reading:'goto'}], kanaBreakdown: [{char:'し', sound:'shi'},{char:'ご', sound:'go'},{char:'と', sound:'to'}] },
+  { id: 52, category: 'n5_noun', kanji: '休み', kana: 'やすみ', romaji: 'yasumi', spanish: 'Descanso', image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400', kanjiBreakdown: [{char:'休', mean:'Descansar', reading:'yasu'}], kanaBreakdown: [{char:'や', sound:'ya'},{char:'す', sound:'su'},{char:'み', sound:'mi'}] },
+  { id: 53, category: 'n5_noun', kanji: '旅行', kana: 'りょこう', romaji: 'ryokou', spanish: 'Viaje', image: 'https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=400', kanjiBreakdown: [{char:'旅', mean:'Viaje', reading:'ryo'},{char:'行', mean:'Ir', reading:'kou'}], kanaBreakdown: [{char:'りょ', sound:'ryo'},{char:'う', sound:'u'},{char:'こ', sound:'ko'},{char:'う', sound:'u'}] },
+  { id: 54, category: 'n5_noun', kanji: '散歩', kana: 'さんぽ', romaji: 'sanpo', spanish: 'Paseo', image: 'https://images.unsplash.com/photo-1517649763962-0c623066013b?w=400', kanjiBreakdown: [{char:'散', mean:'Esparcir', reading:'san'},{char:'歩', mean:'Caminar', reading:'po'}], kanaBreakdown: [{char:'さ', sound:'sa'},{char:'ん', sound:'n'},{char:'ぽ', sound:'po'}] },
+  { id: 55, category: 'n5_noun', kanji: '買い物', kana: 'かいもの', romaji: 'kaimono', spanish: 'Compras', image: 'https://images.unsplash.com/photo-1483985988355-763728e1935b?w=400', kanjiBreakdown: [{char:'買', mean:'Comprar', reading:'kai'},{char:'物', mean:'Cosa', reading:'mono'}], kanaBreakdown: [{char:'か', sound:'ka'},{char:'い', sound:'i'},{char:'も', sound:'mo'},{char:'の', sound:'no'}] },
+  { id: 56, category: 'n5_noun', kanji: '映画', kana: 'えいが', romaji: 'eiga', spanish: 'Película', image: 'https://images.unsplash.com/photo-1485846234645-a62644f84728?w=400', kanjiBreakdown: [{char:'映', mean:'Reflejar', reading:'ei'},{char:'画', mean:'Imagen', reading:'ga'}], kanaBreakdown: [{char:'え', sound:'e'},{char:'い', sound:'i'},{char:'が', sound:'ga'}] },
+  { id: 57, category: 'n5_noun', kanji: '音楽', kana: 'おんがく', romaji: 'ongaku', spanish: 'Música', image: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=400', kanjiBreakdown: [{char:'音', mean:'Sonido', reading:'on'},{char:'楽', mean:'Música/Placer', reading:'gaku'}], kanaBreakdown: [{char:'お', sound:'o'},{char:'ん', sound:'n'},{char:'が', sound:'ga'},{char:'く', sound:'ku'}] },
+  { id: 58, category: 'n5_noun', kanji: '写真', kana: 'しゃしん', romaji: 'shashin', spanish: 'Foto', image: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=400', kanjiBreakdown: [{char:'写', mean:'Copiar', reading:'sha'},{char:'真', mean:'Verdad', reading:'shin'}], kanaBreakdown: [{char:'しゃ', sound:'sha'},{char:'し', sound:'si'},{char:'ん', sound:'n'}] },
+  { id: 59, category: 'n5_noun', kanji: '手紙', kana: 'てがみ', romaji: 'tegami', spanish: 'Carta', image: 'https://images.unsplash.com/photo-1516414917003-4ecf47f0e70b?w=400', kanjiBreakdown: [{char:'手', mean:'Mano', reading:'te'},{char:'紙', mean:'Papel', reading:'gami'}], kanaBreakdown: [{char:'て', sound:'te'},{char:'が', sound:'ga'},{char:'み', sound:'mi'}] },
+  { id: 60, category: 'n5_noun', kanji: '電話', kana: 'でんわ', romaji: 'denwa', spanish: 'Teléfono', image: 'https://images.unsplash.com/photo-1520923179274-136762a2b17e?w=400', kanjiBreakdown: [{char:'電', mean:'Electricidad', reading:'den'},{char:'話', mean:'Habla', reading:'wa'}], kanaBreakdown: [{char:'で', sound:'de'},{char:'ん', sound:'n'},{char:'わ', sound:'wa'}] },
+  { id: 61, category: 'n5_noun', kanji: '郵便局', kana: 'ゆうびんきょく', romaji: 'yuubinkyoku', spanish: 'Oficina de correos', image: 'https://images.unsplash.com/photo-1566847438217-76e82d383f84?w=400', kanjiBreakdown: [{char:'郵', mean:'Correo', reading:'yuu'},{char:'便', mean:'Conveniente', reading:'bin'},{char:'局', mean:'Oficina', reading:'kyoku'}], kanaBreakdown: [{char:'ゆ', sound:'yu'},{char:'う', sound:'u'},{char:'び', sound:'bi'},{char:'ん', sound:'n'},{char:'きょ', sound:'kyo'},{char:'く', sound:'ku'}] },
+  { id: 62, category: 'n5_noun', kanji: '銀行', kana: 'ぎんこう', romaji: 'ginkou', spanish: 'Banco', image: 'https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?w=400', kanjiBreakdown: [{char:'銀', mean:'Plata', reading:'gin'},{char:'行', mean:'Ir', reading:'kou'}], kanaBreakdown: [{char:'ぎ', sound:'gi'},{char:'ん', sound:'n'},{char:'こ', sound:'ko'},{char:'う', sound:'u'}] },
+  { id: 63, category: 'n5_noun', kanji: '病院', kana: 'びょういん', romaji: 'byouin', spanish: 'Hospital', image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=400', kanjiBreakdown: [{char:'病', mean:'Enfermedad', reading:'byou'},{char:'院', mean:'Institución', reading:'in'}], kanaBreakdown: [{char:'びょ', sound:'byo'},{char:'う', sound:'u'},{char:'い', sound:'in'},{char:'ん', sound:'n'}] },
+  { id: 64, category: 'n5_noun', kanji: '公園', kana: 'こうえん', romaji: 'kouen', spanish: 'Parque', image: 'https://images.unsplash.com/photo-1519331379826-f10be5486c6f?w=400', kanjiBreakdown: [{char:'公', mean:'Público', reading:'kou'},{char:'園', mean:'Jardín', reading:'en'}], kanaBreakdown: [{char:'こ', sound:'ko'},{char:'う', sound:'u'},{char:'え', sound:'e'},{char:'ん', sound:'n'}] },
+  { id: 65, category: 'n5_noun', kanji: '動物園', kana: 'どうぶつえん', romaji: 'doubutsuen', spanish: 'Zoo', image: 'https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=400', kanjiBreakdown: [{char:'動', mean:'Mover', reading:'dou'},{char:'物', mean:'Cosa', reading:'butsu'},{char:'園', mean:'Jardín', reading:'en'}], kanaBreakdown: [{char:'ど', sound:'do'},{char:'う', sound:'u'},{char:'ぶ', sound:'bu'},{char:'つ', sound:'tsu'},{char:'え', sound:'e'},{char:'ん', sound:'n'}] },
+  { id: 66, category: 'n5_noun', kanji: '図書館', kana: 'としょかん', romaji: 'toshokan', spanish: 'Biblioteca', image: 'https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=400', kanjiBreakdown: [{char:'図', mean:'Mapa/Dibujo', reading:'to'},{char:'書', mean:'Escribir', reading:'sho'},{char:'館', mean:'Edificio', reading:'kan'}], kanaBreakdown: [{char:'と', sound:'to'},{char:'しょ', sound:'sho'},{char:'か', sound:'ka'},{char:'ん', sound:'n'}] },
+  { id: 67, category: 'n5_noun', kanji: '映画館', kana: 'えいがかん', romaji: 'eigakan', spanish: 'Cine', image: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=400', kanjiBreakdown: [{char:'映', mean:'Reflejar', reading:'ei'},{char:'画', mean:'Imagen', reading:'ga'},{char:'館', mean:'Edificio', reading:'kan'}], kanaBreakdown: [{char:'え', sound:'e'},{char:'い', sound:'i'},{char:'が', sound:'ga'},{char:'か', sound:'ka'},{char:'ん', sound:'n'}] },
+  { id: 68, category: 'n5_noun', kanji: '喫茶店', kana: 'きっさてん', romaji: 'kissaten', spanish: 'Cafetería', image: 'https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=400', kanjiBreakdown: [{char:'喫', mean:'Consumir', reading:'ki'},{char:'茶', mean:'Té', reading:'ssa'},{char:'店', mean:'Tienda', reading:'ten'}], kanaBreakdown: [{char:'き', sound:'ki'},{char:'っ', sound:'(s)'},{char:'さ', sound:'sa'},{char:'て', sound:'te'},{char:'ん', sound:'n'}] },
+  { id: 69, category: 'n5_noun', kanji: 'レストラン', kana: 'レストラン', romaji: 'resutoran', spanish: 'Restaurante', image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400', kanjiBreakdown: [], kanaBreakdown: [{char:'レ', sound:'re'},{char:'ス', sound:'su'},{char:'ト', sound:'to'},{char:'ラ', sound:'ra'},{char:'ン', sound:'n'}] },
+  { id: 70, category: 'n5_noun', kanji: 'ホテル', kana: 'ホテル', romaji: 'hoteru', spanish: 'Hotel', image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400', kanjiBreakdown: [], kanaBreakdown: [{char:'ホ', sound:'ho'},{char:'テ', sound:'te'},{char:'ル', sound:'ru'}] },
+  { id: 71, category: 'n5_noun', kanji: '旅館', kana: 'りょかん', romaji: 'ryokan', spanish: 'Ryokan', image: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=400', kanjiBreakdown: [{char:'旅', mean:'Viaje', reading:'ryo'},{char:'館', mean:'Edificio', reading:'kan'}], kanaBreakdown: [{char:'りょ', sound:'ryo'},{char:'か', sound:'ka'},{char:'ん', sound:'n'}] },
+  { id: 72, category: 'n5_noun', kanji: '空港', kana: 'くうこう', romaji: 'kuukou', spanish: 'Aeropuerto', image: 'https://images.unsplash.com/photo-1530521954074-e64f6810b32d?w=400', kanjiBreakdown: [{char:'空', mean:'Cielo', reading:'kuu'},{char:'港', mean:'Puerto', reading:'kou'}], kanaBreakdown: [{char:'く', sound:'ku'},{char:'う', sound:'u'},{char:'こ', sound:'ko'},{char:'う', sound:'u'}] },
+  { id: 73, category: 'n5_noun', kanji: '駅', kana: 'えき', romaji: 'eki', spanish: 'Estación', image: 'https://images.unsplash.com/photo-1474487022159-4a49a99d1dd8?w=400', kanjiBreakdown: [{char:'駅', mean:'Estación', reading:'eki'}], kanaBreakdown: [{char:'え', sound:'e'},{char:'き', sound:'ki'}] }
 ];
 
 const CATEGORIES = [
@@ -312,14 +362,31 @@ export default function App() {
 
             {/* Back Side */}
             <div className="absolute inset-0 bg-white rounded-[3rem] p-6 shadow-2xl backface-hidden rotate-y-180 flex flex-col border-4 border-white cursor-pointer overflow-hidden">
-              <div className="h-44 rounded-[2.5rem] overflow-hidden mb-6 shadow-inner border border-slate-100">
+              <div className="h-36 rounded-[2.5rem] overflow-hidden mb-4 shadow-inner border border-slate-100">
                 <img src={currentWord.image} className="w-full h-full object-cover" alt="visual" referrerPolicy="no-referrer" />
               </div>
-              <div className="text-center mb-6">
+              <div className="text-center mb-4">
                 <span className="text-red-500 font-black tracking-widest uppercase text-[10px]">{currentWord.romaji}</span>
-                <h2 className="text-4xl font-black text-slate-800 tracking-tight">{currentWord.spanish}</h2>
+                <h2 className="text-3xl font-black text-slate-800 tracking-tight">{currentWord.spanish}</h2>
               </div>
-              <div className="space-y-3 overflow-y-auto max-h-[220px] no-scrollbar pr-1">
+
+              {/* Fonética Kana - Always Visible */}
+              <div className="bg-slate-50 p-4 rounded-3xl border border-slate-100 mb-3">
+                <div className="flex items-center gap-2 mb-2 text-slate-400">
+                  <Music size={14} />
+                  <span className="text-[9px] font-black uppercase tracking-widest">Fonética Kana</span>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {currentWord.kanaBreakdown.map((k, i) => (
+                    <div key={i} className="flex flex-col items-center bg-white px-3 py-1.5 rounded-xl shadow-sm border border-slate-100 min-w-[36px]">
+                      <span className="text-lg font-black text-slate-800 font-jp">{k.char}</span>
+                      <span className="text-[9px] font-black text-slate-400 uppercase">{k.sound}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="space-y-3 overflow-y-auto max-h-[160px] no-scrollbar pr-1">
                 {currentWord.kanjiBreakdown.length > 0 && (
                   <div className="bg-slate-50 p-4 rounded-3xl border border-slate-100">
                     <div className="flex items-center gap-2 mb-3 text-slate-400">
@@ -337,21 +404,6 @@ export default function App() {
                     ))}
                   </div>
                 )}
-
-                <div className="bg-slate-50 p-4 rounded-3xl border border-slate-100">
-                  <div className="flex items-center gap-2 mb-3 text-slate-400">
-                    <Music size={14} />
-                    <span className="text-[9px] font-black uppercase tracking-widest">Fonética Kana</span>
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    {currentWord.kanaBreakdown.map((k, i) => (
-                      <div key={i} className="flex flex-col items-center bg-white px-3 py-2 rounded-xl shadow-sm border border-slate-100 min-w-[40px]">
-                        <span className="text-lg font-black text-slate-800 font-jp">{k.char}</span>
-                        <span className="text-[9px] font-black text-slate-400 uppercase">{k.sound}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
               </div>
             </div>
           </motion.div>
