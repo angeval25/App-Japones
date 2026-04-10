@@ -13,7 +13,7 @@ const WORD_POOL = [
   { id: 2, category: 'n5_noun', kanji: '学校', kana: 'がっこう', romaji: 'gakkou', spanish: 'Escuela', image: 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=400', kanjiBreakdown: [{char:'学', mean:'Estudio', reading:'ga'},{char:'校', mean:'Colegio', reading:'kkou'}], kanaBreakdown: [{char:'가', sound:'ga'},{char:'っ', sound:'(p)'},{char:'こ', sound:'ko'},{char:'う', sound:'u'}] },
   { id: 3, category: 'n5_noun', kanji: '日本', kana: 'にほん', romaji: 'nihon', spanish: 'Japón', image: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=400', kanjiBreakdown: [{char:'日', mean:'Sol', reading:'ni'},{char:'本', mean:'Origen', reading:'hon'}], kanaBreakdown: [{char:'に', sound:'ni'},{char:'ほ', sound:'ho'},{char:'ん', sound:'n'}] },
   { id: 4, category: 'n5_noun', kanji: '先生', kana: 'せんせい', romaji: 'sensei', spanish: 'Profesor', image: 'https://images.unsplash.com/photo-1544531585-9847b68c8c86?w=400', kanjiBreakdown: [{char:'先', mean:'Antes', reading:'sen'},{char:'生', mean:'Vida', reading:'sei'}], kanaBreakdown: [{char:'せ', sound:'se'},{char:'ん', sound:'n'},{char:'せ', sound:'se'},{char:'い', sound:'i'}] },
-  { id: 5, category: 'n5_noun', kanji: '学生', kana: 'がくせい', romaji: 'gakusei', spanish: 'Estudiante', image: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=400', kanjiBreakdown: [{char:'学', mean:'Estudio', reading:'gaku'},{char:'生', mean:'Vida', reading:'sei'}], kanaBreakdown: [{char:'が', sound:'ga'},{char:'く', sound:'ku'},{char:'せ', sound:'se'},{char:'い', sound:'i'}] },
+  { id: 5, category: 'n5_noun', kanji: '学生', kana: 'がくせい', romaji: 'gakusei', spanish: 'Estudiante', image: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=400', kanjiBreakdown: [{char:'学', mean:'Estudio', reading:'gaku'},{char:'生', mean:'Vida', reading:'sei'}], kanaBreakdown: [{char:'가', sound:'ga'},{char:'く', sound:'ku'},{char:'せ', sound:'se'},{char:'い', sound:'i'}] },
   { id: 6, category: 'n5_noun', kanji: '友達', kana: 'ともだち', romaji: 'tomodachi', spanish: 'Amigo', image: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=400', kanjiBreakdown: [{char:'友', mean:'Amigo', reading:'tomo'},{char:'達', mean:'Plural', reading:'dachi'}], kanaBreakdown: [{char:'と', sound:'to'},{char:'も', sound:'mo'},{char:'だ', sound:'da'},{char:'ち', sound:'chi'}] },
   { id: 7, category: 'n5_noun', kanji: '水', kana: 'みず', romaji: 'mizu', spanish: 'Agua', image: 'https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=400', kanjiBreakdown: [{char:'水', mean:'Agua', reading:'mizu'}], kanaBreakdown: [{char:'み', sound:'mi'},{char:'ず', sound:'zu'}] },
   { id: 8, category: 'n5_noun', kanji: '本', kana: 'ほん', romaji: 'hon', spanish: 'Libro', image: 'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=400', kanjiBreakdown: [{char:'本', mean:'Libro', reading:'hon'}], kanaBreakdown: [{char:'ほ', sound:'ho'},{char:'ん', sound:'n'}] },
@@ -41,45 +41,60 @@ const WORD_POOL = [
 ];
 
 const CATEGORIES = [
-  { id: 'hiragana', name: 'Hiragana', icon: <BookOpen size={20} />, color: 'bg-red-500' },
-  { id: 'katakana', name: 'Katakana', icon: <Languages size={20} />, color: 'bg-blue-600' },
+  { id: 'alfabeto', name: 'Alfabeto', icon: <BookOpen size={20} />, color: 'bg-red-500' },
   { id: 'all', name: 'Todo', icon: <LayoutGrid size={20} />, color: 'bg-slate-900' },
   { id: 'n5_noun', name: 'Nombres', icon: <Tag size={20} />, color: 'bg-emerald-500' },
   { id: 'n5_verb', name: 'Verbos', icon: <Rocket size={20} />, color: 'bg-blue-500' },
   { id: 'n5_adj', name: 'Adj.', icon: <Coffee size={20} />, color: 'bg-orange-500' },
 ];
 
-const HIRAGANA_DATA = [
-  { char: 'あ', romaji: 'a' }, { char: 'い', romaji: 'i' }, { char: 'う', romaji: 'u' }, { char: 'え', romaji: 'e' }, { char: 'お', romaji: 'o' },
-  { char: 'か', romaji: 'ka' }, { char: 'き', romaji: 'ki' }, { char: 'く', romaji: 'ku' }, { char: 'け', romaji: 'ke' }, { char: 'こ', romaji: 'ko' },
-  { char: 'さ', romaji: 'sa' }, { char: 'し', romaji: 'shi' }, { char: 'す', romaji: 'su' }, { char: 'せ', romaji: 'se' }, { char: 'そ', romaji: 'so' },
-  { char: 'た', romaji: 'ta' }, { char: 'ち', romaji: 'chi' }, { char: 'つ', romaji: 'tsu' }, { char: 'て', romaji: 'te' }, { char: 'と', romaji: 'to' },
-  { char: 'な', romaji: 'na' }, { char: 'に', romaji: 'ni' }, { char: 'ぬ', romaji: 'nu' }, { char: 'ね', romaji: 'ne' }, { char: 'の', romaji: 'no' },
-  { char: 'は', romaji: 'ha' }, { char: 'ひ', romaji: 'hi' }, { char: 'ふ', romaji: 'fu' }, { char: 'へ', romaji: 'he' }, { char: 'ほ', romaji: 'ho' },
-  { char: 'ま', romaji: 'ma' }, { char: 'み', romaji: 'mi' }, { char: 'む', romaji: 'mu' }, { char: 'め', romaji: 'me' }, { char: 'も', romaji: 'mo' },
-  { char: 'や', romaji: 'ya' }, { char: '', romaji: '' }, { char: 'ゆ', romaji: 'yu' }, { char: '', romaji: '' }, { char: 'よ', romaji: 'yo' },
-  { char: 'ら', romaji: 'ra' }, { char: 'り', romaji: 'ri' }, { char: 'る', romaji: 'ru' }, { char: 'れ', romaji: 're' }, { char: 'ろ', romaji: 'ro' },
-  { char: 'わ', romaji: 'wa' }, { char: '', romaji: '' }, { char: '', romaji: '' }, { char: '', romaji: '' }, { char: 'を', romaji: 'wo' },
-  { char: 'ん', romaji: 'n' }
-];
-
-const KATAKANA_DATA = [
-  { char: 'ア', romaji: 'a' }, { char: 'イ', romaji: 'i' }, { char: 'ウ', romaji: 'u' }, { char: 'エ', romaji: 'e' }, { char: 'オ', romaji: 'o' },
-  { char: 'カ', romaji: 'ka' }, { char: 'キ', romaji: 'ki' }, { char: 'ク', romaji: 'ku' }, { char: 'ケ', romaji: 'ke' }, { char: 'コ', romaji: 'ko' },
-  { char: 'サ', romaji: 'sa' }, { char: 'シ', romaji: 'shi' }, { char: 'ス', romaji: 'su' }, { char: 'セ', romaji: 'se' }, { char: 'ソ', romaji: 'so' },
-  { char: 'タ', romaji: 'ta' }, { char: 'チ', romaji: 'chi' }, { char: 'ツ', romaji: 'tsu' }, { char: 'テ', romaji: 'te' }, { char: 'ト', romaji: 'to' },
-  { char: 'ナ', romaji: 'na' }, { char: 'ニ', romaji: 'ni' }, { char: 'ぬ', romaji: 'nu' }, { char: 'ネ', romaji: 'ne' }, { char: 'ノ', romaji: 'no' },
-  { char: 'ハ', romaji: 'ha' }, { char: 'ヒ', romaji: 'hi' }, { char: 'フ', romaji: 'fu' }, { char: 'ヘ', romaji: 'he' }, { char: 'ホ', romaji: 'ho' },
-  { char: 'マ', romaji: 'ma' }, { char: 'ミ', romaji: 'mi' }, { char: 'ム', romaji: 'mu' }, { char: 'メ', romaji: 'me' }, { char: 'モ', romaji: 'mo' },
-  { char: 'ヤ', romaji: 'ya' }, { char: '', romaji: '' }, { char: 'ユ', romaji: 'yu' }, { char: '', romaji: '' }, { char: 'ヨ', romaji: 'yo' },
-  { char: 'ラ', romaji: 'ra' }, { char: 'リ', romaji: 'ri' }, { char: 'ル', romaji: 'ru' }, { char: 'レ', romaji: 're' }, { char: 'ロ', romaji: 'ro' },
-  { char: 'ワ', romaji: 'wa' }, { char: '', romaji: '' }, { char: '', romaji: '' }, { char: '', romaji: '' }, { char: 'ヲ', romaji: 'wo' },
-  { char: 'ン', romaji: 'n' }
-];
+const ALFABETO: Record<string, { char: string; romaji: string }[]> = {
+  hiragana: [
+    { char: 'あ', romaji: 'a' }, { char: 'い', romaji: 'i' }, { char: 'う', romaji: 'u' }, { char: 'え', romaji: 'e' }, { char: 'お', romaji: 'o' },
+    { char: 'か', romaji: 'ka' }, { char: 'き', romaji: 'ki' }, { char: 'く', romaji: 'ku' }, { char: 'け', romaji: 'ke' }, { char: 'こ', romaji: 'ko' },
+    { char: 'さ', romaji: 'sa' }, { char: 'し', romaji: 'shi' }, { char: 'す', romaji: 'su' }, { char: 'せ', romaji: 'se' }, { char: 'そ', romaji: 'so' },
+    { char: 'た', romaji: 'ta' }, { char: 'ち', romaji: 'chi' }, { char: 'つ', romaji: 'tsu' }, { char: 'て', romaji: 'te' }, { char: 'と', romaji: 'to' },
+    { char: 'な', romaji: 'na' }, { char: 'に', romaji: 'ni' }, { char: 'ぬ', romaji: 'nu' }, { char: 'ね', romaji: 'ne' }, { char: 'の', romaji: 'no' },
+    { char: 'は', romaji: 'ha' }, { char: 'ひ', romaji: 'hi' }, { char: 'ふ', romaji: 'fu' }, { char: 'へ', romaji: 'he' }, { char: 'ほ', romaji: 'ho' },
+    { char: 'ま', romaji: 'ma' }, { char: 'み', romaji: 'mi' }, { char: 'む', romaji: 'mu' }, { char: 'め', romaji: 'me' }, { char: 'も', romaji: 'mo' },
+    { char: 'や', romaji: 'ya' }, { char: '', romaji: '' }, { char: 'ゆ', romaji: 'yu' }, { char: '', romaji: '' }, { char: 'よ', romaji: 'yo' },
+    { char: 'ら', romaji: 'ra' }, { char: 'り', romaji: 'ri' }, { char: 'る', romaji: 'ru' }, { char: 'れ', romaji: 're' }, { char: 'ろ', romaji: 'ro' },
+    { char: 'わ', romaji: 'wa' }, { char: '', romaji: '' }, { char: '', romaji: '' }, { char: '', romaji: '' }, { char: 'を', romaji: 'wo' },
+    { char: 'ん', romaji: 'n' },
+    // Dakuten (Tenten)
+    { char: 'が', romaji: 'ga' }, { char: 'ぎ', romaji: 'gi' }, { char: 'ぐ', romaji: 'gu' }, { char: 'げ', romaji: 'ge' }, { char: 'ご', romaji: 'go' },
+    { char: 'ざ', romaji: 'za' }, { char: 'じ', romaji: 'ji' }, { char: 'ず', romaji: 'zu' }, { char: 'ぜ', romaji: 'ze' }, { char: 'ぞ', romaji: 'zo' },
+    { char: 'だ', romaji: 'da' }, { char: 'ぢ', romaji: 'ji' }, { char: 'づ', romaji: 'zu' }, { char: 'で', romaji: 'de' }, { char: 'ど', romaji: 'do' },
+    { char: 'ば', romaji: 'ba' }, { char: 'び', romaji: 'bi' }, { char: 'ぶ', romaji: 'bu' }, { char: 'べ', romaji: 'be' }, { char: 'ぼ', romaji: 'bo' },
+    // Handakuten (Maru)
+    { char: 'ぱ', romaji: 'pa' }, { char: 'ぴ', romaji: 'pi' }, { char: 'ぷ', romaji: 'pu' }, { char: 'ぺ', romaji: 'pe' }, { char: 'ぽ', romaji: 'po' }
+  ],
+  katakana: [
+    { char: 'ア', romaji: 'a' }, { char: 'イ', romaji: 'i' }, { char: 'ウ', romaji: 'u' }, { char: 'エ', romaji: 'e' }, { char: 'オ', romaji: 'o' },
+    { char: 'カ', romaji: 'ka' }, { char: 'キ', romaji: 'ki' }, { char: 'ク', romaji: 'ku' }, { char: 'ケ', romaji: 'ke' }, { char: 'コ', romaji: 'ko' },
+    { char: 'サ', romaji: 'sa' }, { char: 'シ', romaji: 'shi' }, { char: 'ス', romaji: 'su' }, { char: 'セ', romaji: 'se' }, { char: 'ソ', romaji: 'so' },
+    { char: 'タ', romaji: 'ta' }, { char: 'チ', romaji: 'chi' }, { char: 'ツ', romaji: 'tsu' }, { char: 'テ', romaji: 'te' }, { char: 'ト', romaji: 'to' },
+    { char: 'ナ', romaji: 'na' }, { char: 'ニ', romaji: 'ni' }, { char: 'ぬ', romaji: 'nu' }, { char: 'ネ', romaji: 'ne' }, { char: 'ノ', romaji: 'no' },
+    { char: 'ハ', romaji: 'ha' }, { char: 'ヒ', romaji: 'hi' }, { char: 'フ', romaji: 'fu' }, { char: 'ヘ', romaji: 'he' }, { char: 'ホ', romaji: 'ho' },
+    { char: 'マ', romaji: 'ma' }, { char: 'ミ', romaji: 'mi' }, { char: 'ム', romaji: 'mu' }, { char: 'メ', romaji: 'me' }, { char: 'モ', romaji: 'mo' },
+    { char: 'ヤ', romaji: 'ya' }, { char: '', romaji: '' }, { char: 'ユ', romaji: 'yu' }, { char: '', romaji: '' }, { char: 'ヨ', romaji: 'yo' },
+    { char: 'ラ', romaji: 'ra' }, { char: 'り', romaji: 'ri' }, { char: 'る', romaji: 'ru' }, { char: 'レ', romaji: 're' }, { char: 'ロ', romaji: 'ro' },
+    { char: 'ワ', romaji: 'wa' }, { char: '', romaji: '' }, { char: '', romaji: '' }, { char: '', romaji: '' }, { char: 'ヲ', romaji: 'wo' },
+    { char: 'ン', romaji: 'n' },
+    // Dakuten (Tenten)
+    { char: 'ガ', romaji: 'ga' }, { char: 'ギ', romaji: 'gi' }, { char: 'グ', romaji: 'gu' }, { char: 'ゲ', romaji: 'ge' }, { char: 'ゴ', romaji: 'go' },
+    { char: 'ザ', romaji: 'za' }, { char: 'ジ', romaji: 'ji' }, { char: 'ズ', romaji: 'zu' }, { char: 'ゼ', romaji: 'ze' }, { char: 'ゾ', romaji: 'zo' },
+    { char: 'ダ', romaji: 'da' }, { char: 'ヂ', romaji: 'ji' }, { char: 'ヅ', romaji: 'zu' }, { char: 'デ', romaji: 'de' }, { char: 'ド', romaji: 'do' },
+    { char: 'バ', romaji: 'ba' }, { char: 'ビ', romaji: 'bi' }, { char: 'ブ', romaji: 'bu' }, { char: 'ベ', romaji: 'be' }, { char: 'ボ', romaji: 'bo' },
+    // Handakuten (Maru)
+    { char: 'パ', romaji: 'pa' }, { char: 'ピ', romaji: 'pi' }, { char: 'プ', romaji: 'pu' }, { char: 'ペ', romaji: 'pe' }, { char: 'ポ', romaji: 'po' }
+  ]
+};
 
 export default function App() {
   const [view, setView] = useState('menu');
   const [selectedCat, setSelectedCat] = useState('all');
+  const [alfabetoType, setAlfabetoType] = useState<'hiragana' | 'katakana'>('hiragana');
   const [sessionWords, setSessionWords] = useState<typeof WORD_POOL>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [flipped, setFlipped] = useState(false);
@@ -112,12 +127,8 @@ export default function App() {
   }, []);
 
   const startSession = (catId: string) => {
-    if (catId === 'hiragana') {
-      setView('hiragana');
-      return;
-    }
-    if (catId === 'katakana') {
-      setView('katakana');
+    if (catId === 'alfabeto') {
+      setView('alfabeto');
       return;
     }
     const filtered = WORD_POOL.filter(w => catId === 'all' || w.category === catId);
@@ -143,21 +154,38 @@ export default function App() {
 
   const currentWord = sessionWords[currentIndex];
 
-  if (view === 'hiragana' || view === 'katakana') {
-    const data = view === 'hiragana' ? HIRAGANA_DATA : KATAKANA_DATA;
+  if (view === 'alfabeto') {
+    const data = ALFABETO[alfabetoType];
     return (
       <div className="min-h-screen bg-slate-50 p-6 flex flex-col items-center font-sans">
-        <header className="w-full max-w-md flex justify-between items-center mb-8">
-          <button onClick={() => setView('menu')} className="text-xs font-black text-slate-400 uppercase flex items-center gap-1 hover:text-red-500 transition-colors">
-            <ChevronLeft size={16} /> Menú
-          </button>
-          <h2 className="text-xl font-black text-slate-900 tracking-tight uppercase">TABLA {view}</h2>
+        <header className="w-full max-w-md flex flex-col gap-6 mb-8">
+          <div className="flex justify-between items-center">
+            <button onClick={() => setView('menu')} className="text-xs font-black text-slate-400 uppercase flex items-center gap-1 hover:text-red-500 transition-colors">
+              <ChevronLeft size={16} /> Menú
+            </button>
+            <h2 className="text-xl font-black text-slate-900 tracking-tight uppercase">ALFABETO</h2>
+          </div>
+          
+          <div className="flex bg-slate-200 p-1 rounded-2xl">
+            <button 
+              onClick={() => setAlfabetoType('hiragana')}
+              className={`flex-1 py-3 rounded-xl font-black text-xs uppercase tracking-widest transition-all ${alfabetoType === 'hiragana' ? 'bg-white text-red-600 shadow-sm' : 'text-slate-500'}`}
+            >
+              Hiragana
+            </button>
+            <button 
+              onClick={() => setAlfabetoType('katakana')}
+              className={`flex-1 py-3 rounded-xl font-black text-xs uppercase tracking-widest transition-all ${alfabetoType === 'katakana' ? 'bg-white text-blue-600 shadow-sm' : 'text-slate-500'}`}
+            >
+              Katakana
+            </button>
+          </div>
         </header>
 
-        <div className="w-full max-w-md grid grid-cols-5 gap-2">
+        <div className="w-full max-w-md grid grid-cols-5 gap-2 pb-10">
           {data.map((h, i) => (
             <motion.button
-              key={i}
+              key={`${alfabetoType}-${i}`}
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: i * 0.01 }}
@@ -208,7 +236,7 @@ export default function App() {
                 <div className={`${cat.color} p-3 rounded-2xl text-white shadow-md group-hover:rotate-12 transition-transform`}>{cat.icon}</div>
                 <div className="flex-1 text-left">
                   <p className="font-black text-slate-800 uppercase text-xs tracking-wider">{cat.name}</p>
-                  {cat.id !== 'hiragana' && (
+                  {cat.id !== 'alfabeto' && (
                     <div className="flex items-center gap-2 mt-1">
                       <div className="flex-1 h-1.5 bg-slate-100 rounded-full overflow-hidden">
                         <div className={`h-full ${cat.color}`} style={{ width: `${progress}%` }} />
@@ -216,8 +244,8 @@ export default function App() {
                       <span className="text-[10px] font-black text-slate-400">{masteredCount}/{count}</span>
                     </div>
                   )}
-                  {cat.id === 'hiragana' && (
-                    <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mt-1">46 Caracteres Básicos</p>
+                  {cat.id === 'alfabeto' && (
+                    <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mt-1">Hiragana & Katakana</p>
                   )}
                 </div>
                 <ChevronRight className="text-slate-300" />
