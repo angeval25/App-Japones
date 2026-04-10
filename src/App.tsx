@@ -361,47 +361,50 @@ export default function App() {
             </div>
 
             {/* Back Side */}
-            <div className="absolute inset-0 bg-white rounded-[3rem] p-6 shadow-2xl backface-hidden rotate-y-180 flex flex-col border-4 border-white cursor-pointer overflow-hidden">
-              <div className="h-36 rounded-[2.5rem] overflow-hidden mb-4 shadow-inner border border-slate-100">
+            <div className="absolute inset-0 bg-white rounded-[3rem] p-5 shadow-2xl backface-hidden rotate-y-180 flex flex-col border-4 border-white cursor-pointer overflow-hidden">
+              <div className="h-28 rounded-[2rem] overflow-hidden mb-3 shadow-inner border border-slate-100 shrink-0">
                 <img src={currentWord.image} className="w-full h-full object-cover" alt="visual" referrerPolicy="no-referrer" />
               </div>
-              <div className="text-center mb-4">
-                <span className="text-red-500 font-black tracking-widest uppercase text-[10px]">{currentWord.romaji}</span>
-                <h2 className="text-3xl font-black text-slate-800 tracking-tight">{currentWord.spanish}</h2>
+              <div className="text-center mb-3 shrink-0">
+                <span className="text-red-500 font-black tracking-widest uppercase text-[9px]">{currentWord.romaji}</span>
+                <h2 className="text-2xl font-black text-slate-800 tracking-tight leading-none">{currentWord.spanish}</h2>
               </div>
 
-              {/* Fonética Kana - Always Visible */}
-              <div className="bg-slate-50 p-4 rounded-3xl border border-slate-100 mb-3">
-                <div className="flex items-center gap-2 mb-2 text-slate-400">
-                  <Music size={14} />
-                  <span className="text-[9px] font-black uppercase tracking-widest">Fonética Kana</span>
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  {currentWord.kanaBreakdown.map((k, i) => (
-                    <div key={i} className="flex flex-col items-center bg-white px-3 py-1.5 rounded-xl shadow-sm border border-slate-100 min-w-[36px]">
-                      <span className="text-lg font-black text-slate-800 font-jp">{k.char}</span>
-                      <span className="text-[9px] font-black text-slate-400 uppercase">{k.sound}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="space-y-3 overflow-y-auto max-h-[160px] no-scrollbar pr-1">
-                {currentWord.kanjiBreakdown.length > 0 && (
-                  <div className="bg-slate-50 p-4 rounded-3xl border border-slate-100">
-                    <div className="flex items-center gap-2 mb-3 text-slate-400">
-                      <Languages size={14} />
-                      <span className="text-[9px] font-black uppercase tracking-widest">Análisis Kanji</span>
-                    </div>
-                    {currentWord.kanjiBreakdown.map((k, i) => (
-                      <div key={i} className="flex items-center gap-3 bg-white p-2 rounded-2xl shadow-sm mb-2 border border-slate-100">
-                        <span className="text-lg font-black text-red-600 bg-red-50 w-9 h-9 flex items-center justify-center rounded-xl font-jp">{k.char}</span>
-                        <div>
-                          <p className="text-[9px] font-black text-blue-500 uppercase leading-none mb-1">{k.reading}</p>
-                          <p className="text-sm font-bold text-slate-700">{k.mean}</p>
-                        </div>
+              <div className="flex flex-col gap-2 overflow-hidden">
+                {/* Fonética Kana */}
+                <div className="bg-slate-50 p-3 rounded-2xl border border-slate-100">
+                  <div className="flex items-center gap-2 mb-2 text-slate-400">
+                    <Music size={12} />
+                    <span className="text-[8px] font-black uppercase tracking-widest">Fonética Kana</span>
+                  </div>
+                  <div className="flex flex-wrap gap-1.5">
+                    {currentWord.kanaBreakdown.map((k, i) => (
+                      <div key={i} className="flex flex-col items-center bg-white px-2 py-1 rounded-lg shadow-sm border border-slate-100 min-w-[32px]">
+                        <span className="text-base font-black text-slate-800 font-jp leading-tight">{k.char}</span>
+                        <span className="text-[8px] font-black text-slate-400 uppercase">{k.sound}</span>
                       </div>
                     ))}
+                  </div>
+                </div>
+
+                {/* Análisis Kanji */}
+                {currentWord.kanjiBreakdown.length > 0 && (
+                  <div className="bg-slate-50 p-3 rounded-2xl border border-slate-100">
+                    <div className="flex items-center gap-2 mb-2 text-slate-400">
+                      <Languages size={12} />
+                      <span className="text-[8px] font-black uppercase tracking-widest">Análisis Kanji</span>
+                    </div>
+                    <div className="grid grid-cols-1 gap-1.5">
+                      {currentWord.kanjiBreakdown.map((k, i) => (
+                        <div key={i} className="flex items-center gap-2 bg-white p-1.5 rounded-xl shadow-sm border border-slate-100">
+                          <span className="text-base font-black text-red-600 bg-red-50 w-8 h-8 flex items-center justify-center rounded-lg font-jp shrink-0">{k.char}</span>
+                          <div className="min-w-0">
+                            <p className="text-[8px] font-black text-blue-500 uppercase leading-none mb-0.5 truncate">{k.reading}</p>
+                            <p className="text-xs font-bold text-slate-700 truncate">{k.mean}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 )}
               </div>
